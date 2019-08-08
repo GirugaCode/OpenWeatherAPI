@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var moodTextField: UITextField!
     
     @IBAction func submitMoodbtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "weatherVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
