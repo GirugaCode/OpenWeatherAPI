@@ -39,7 +39,7 @@
                                         <state key="normal" title="Submit Mood"/>
                                         <connections>
                                             <action selector="submitMoodbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ETT-hD-mxd"/>
-                                            <segue destination="6SH-xP-yno" kind="show" id="3UD-ZD-h8a"/>
+                                            <segue destination="6SH-xP-yno" kind="show" identifier="weatherVC" id="3UD-ZD-h8a"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -60,13 +60,13 @@
         <!--Weather and Mood-->
         <scene sceneID="23T-6J-aJW">
             <objects>
-                <viewController title="Weather and Mood" id="6SH-xP-yno" customClass="WeatherViewController" customModule="OpenWeatherMapAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weatherVC" title="Weather and Mood" id="6SH-xP-yno" customClass="WeatherViewController" customModule="OpenWeatherMapAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qqe-cY-1RC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Vj9-Qw-nJt">
-                                <rect key="frame" x="119" y="208" width="176.5" height="115.5"/>
+                                <rect key="frame" x="119" y="208" width="176.5" height="163"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today you are feeling..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfO-uU-VSX">
@@ -81,8 +81,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-sT-Z8o">
-                                        <rect key="frame" x="39.5" y="95" width="98" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-sT-Z8o">
+                                        <rect key="frame" x="76.5" y="95" width="24" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degrees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-2W-AGu">
+                                        <rect key="frame" x="56" y="142.5" width="64.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

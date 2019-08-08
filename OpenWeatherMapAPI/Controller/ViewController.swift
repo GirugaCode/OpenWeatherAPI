@@ -13,14 +13,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var moodTextField: UITextField!
     
     @IBAction func submitMoodbtn(_ sender: Any) {
+        self.performSegue(withIdentifier: "weatherVC", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "weatherVC" {
+            let vc = segue.destination as! WeatherViewController
+            vc.mood = moodTextField.text!
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 
